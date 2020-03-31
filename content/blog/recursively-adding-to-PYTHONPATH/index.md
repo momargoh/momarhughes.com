@@ -45,24 +45,24 @@ I recently decided to upload my [Breguet]("https://github.com/momargoh/Breguet")
 ## PYTHONPATH and Python path files (`.pth`)
 So what exactly is `PYTHONPATH` and what are Python path files? Well, put simply, `PYTHONPATH` is a variable saved somewhere on your operating system that defines all the places to look for Python modules. You can see what's in your `PYTHONPATH` like so:
 
-    ```python
-    import sys
-    print(sys.path)
-    ```
+```python
+import sys
+print(sys.path)
+```
 So if you want to save your Python module somewhere that your operating system doesn't already check (like me, hence this post), you'll need to add that location to `PYTHONPATH`. Now, you can add it directly to `PYTHONPATH` very easily; the following snippet places your package directory at the start of `PYTHONPATH` so that it is checked first (that's what `sys.path.insert(0, ...)` does, otherwise you can add it to the end using `sys.path.append(...)`).
 
-    ```python
-    import sys
-    sys.path.insert(0, 'path/to/package/directory')
-    ```
+```python
+import sys
+sys.path.insert(0, 'path/to/package/directory')
+```
 So then what is a `.pth` file? Well, that's Python's way of trying to make it easier for you to add directories to `PYTHONPATH`. Instead of needing to run the above lines at the beginning of each script, you can just list your package directories in a `.pth` file and Python will automatically load them. You just need to save the `.pth` file in any of the directories that are already in `PYTHONPATH` (note, this could require admin permissions).
 
-    ```python
-    # mypypath.pth
-    'path/to/a/package/directory'
-    'path/to/another/package/directory'
-    'path/to/yet/another/package/directory'
-    ```
+```python
+# mypypath.pth
+'path/to/a/package/directory'
+'path/to/another/package/directory'
+'path/to/yet/another/package/directory'
+```
 
 You can also add to `PYTHONPATH` via your operating system's command line or another system-specific method (eg, adding a few lines to your `.bashrc` file if you use Ubuntu). However, `.pth` files are not unique to any operating system which means they are transferrable, plus, best of all, they're written in Python which saves you having to learn any `bash` or `PowerShell` commands.
 
@@ -71,21 +71,21 @@ One of my core programming philosophies is that if you have to write the same co
 
 So, let's tap into the fact that Python path files allow you to import Python modules. Great! That means I can write a Python script that recursively looks through a directory for modules, save it in the same directory as the `.pth` file and then import it. The `.pth` file thus becomes simply:
 
-    ```python
-    # mypypath.pth
-    import mypypath
-    ```
+```python
+# mypypath.pth
+import mypypath
+```
 Now we can write a script that will search our Python directory (for me that's `home/momar/Python`) for sub-directories, which are our Python packages. The `for` loop of the snippet below searches `/path/to/your/python/directory` and assigns anything it finds (which could also be files) to the variable `dir_name` (eg, 'Package1', 'Package2', etc). It then turns those file/directory names into absolute paths called `dir_path` (eg, '/path/to/your/python/directory/Package1', '/path/to/your/python/directory/Package2', etc) and checks whether they are files or directories. Finally, it adds the directories to `PYTHONPATH`.
 
-    ```python
-    # mypypath.py
-    import sys, os
-    pypath = '/path/to/your/python/directory'
-    for dir_name in os.listdir(pypath):
-        dir_path = os.path.join(pypath, dir_name)
-        if os.path.isdir(dir_path):
-            sys.path.insert(0, dir_path)
-    ```
+```python
+# mypypath.py
+import sys, os
+pypath = '/path/to/your/python/directory'
+for dir_name in os.listdir(pypath):
+    dir_path = os.path.join(pypath, dir_name)
+    if os.path.isdir(dir_path):
+        sys.path.insert(0, dir_path)
+```
 
 ## Conclusion
 So there you go, that's how I got Python to recursively add all my package directories to `PYTHONPATH`. As I mentioned before, and as with programming in general, there are multiple other ways I could have done this. But, as I already had an `easy-install.pth` file that I had edited previously, I thought the easiest way for me would be to quickly tweak it a little.

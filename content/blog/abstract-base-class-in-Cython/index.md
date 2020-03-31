@@ -46,63 +46,63 @@ Without getting into too much specific detail, I was designing an `MCycle` compo
 ## What is an base class?
 Well firstly, it's also called a 'parent' or 'super' class though for me a 'base' class is essentially the parent of all parents: it doesn't inherit from any other classes. So all the other classes in your package will be 'children' of this base class, hence why it should only contain the most core functionalities. Creating a base class is very simple: you just don't inherit from anywhere! So the class structure could look something like:
 
-    ```python
-    # Python example
-    class PyBaseClass():
-        def __init__(self, param1, param2, ...):
-            ...
+```python
+# Python example
+class PyBaseClass():
+    def __init__(self, param1, param2, ...):
+        ...
 
-        def base_method1(self, ...):
-            ...
-        
-        def base_method2(self):
-            ...
-        
-    # Cython example
-    cdef class CyBaseClass():
-        def __init__(self, str param1, float param2, ...):
-            ...
+    def base_method1(self, ...):
+        ...
+    
+    def base_method2(self):
+        ...
+    
+# Cython example
+cdef class CyBaseClass():
+    def __init__(self, str param1, float param2, ...):
+        ...
 
-        cdef void base_method1(self, ...):
-            ...
-        
-        cpdef int base_method2(self):
-            ...     
-    ```
+    cdef void base_method1(self, ...):
+        ...
+    
+    cpdef int base_method2(self):
+        ...     
+```
 
 Inheriting from a base/parent is very also simple: you just place the parent class in the definition of the child class. And if you want your child to have more than one parent (cos hey, being a single parent is hard!), you just list them, easy! For example:
 
-    ```python
-    # Python example
-    class PyChildClass(PyBaseClass, OtherParentClass):
-        def __init__(self, param1, param2, ...):
-            ...
+```python
+# Python example
+class PyChildClass(PyBaseClass, OtherParentClass):
+    def __init__(self, param1, param2, ...):
+        ...
 
-        def child_method1(self, ...):
-            ...
-        
-        def child_method2(self):
-            ...
+    def child_method1(self, ...):
+        ...
+    
+    def child_method2(self):
+        ...
 
-        # override a base class
-        def base_method1(self, ...):
-            ...
-        
-    # Cython example
-    cdef class CyChildClass(CyBaseClass, OtherParentClass):
-        def __init__(self, double param1, bint param2, ...):
-            ...
+    # override a base class
+    def base_method1(self, ...):
+        ...
+    
+# Cython example
+cdef class CyChildClass(CyBaseClass, OtherParentClass):
+    def __init__(self, double param1, bint param2, ...):
+        ...
 
-        cdef void child_method1(self, ...):
-            ...
-        
-        cpdef int child_method2(self):
-            ...   
+    cdef void child_method1(self, ...):
+        ...
+    
+    cpdef int child_method2(self):
+        ...   
 
-        # override a base class
-        cdef void base_method1(self, ...):
-            ... 
-    ```
+    # override a base class
+    cdef void base_method1(self, ...):
+        ... 
+```
 This is clearly not a full lesson in inheritance (there are loooads of great ones out there), but I thought it worth showing you the basic structure. And it really is as simple as putting the base class in the child class definition. Note that you can override the base class methods, as long as they have the same declaration or are overriden by a Python (def) method. Again, this is really just the surface of inheritance and a great idea for a future article topic.
 
 ## So then what is an abstract base class?
@@ -137,16 +137,18 @@ nope = AbstractBaseClass()
 ```
 
 Whereas the following will work fine...
+
 ```python
 kid = ChildClass()
 kid.abstract_method()
 ```
 ...and prints out...
+
 ```python
 original abstract_method
 overridden abstract_method
 ```
-So that's the very basics of ABCs in Python. HOWEVER, as the subtitle of this post hinted, ABC don't exist in Cython! Technically. But that doesn't mean you can't make one anyway. Let me explain, the `@abc.abstractmethod` doesn't work with Cython's `cdef class ...`, so from a pedantic programmatic perspective that's why I said you can't make an ABC in Cython: you can't force a class to require its methods to be overridden. But it's a similar story with private class attributes in Python: in languages like C and C++ you can declare a class attribute as being `private` which limits its access from child classes. In Python, technically, you can't do this, but by using two leading underscores in your attribute name (eg, `__my_attr`), Python will mangle the name a bit to make it harder to find and edit. I suggest you just do the same in Cython: just name the class so that it's obvious it's supposed to be used as an ABC. For an open -source scientific project like `MCycle`, security and privacy aren't really an issue, so if somebody wants to construct the ABC, all they're doing is wasting their own time.
+So that's the very basics of ABCs in Python. HOWEVER, as the subtitle of this post hinted, ABC don't exist in Cython! Technically. But that doesn't mean you can't make one anyway. Let me explain, the `@abc.abstractmethod` doesn't work with Cython's `cdef class ...`, so from a pedantic programmatic perspective that's why I said you can't make an ABC in Cython: you can't force a class to require its methods to be overridden. But it's a similar story with private class attributes in Python: in languages like C and C++ you can declare a class attribute as being `private` which limits its access from child classes. In Python, technically, you can't do this, but by using two leading underscores in your attribute name (eg, `__my_attr`), Python will mangle the name a bit to make it harder to find and edit. I suggest you just do the same in Cython: just name the class so that it's obvious it's supposed to be used as an ABC. For an open-source scientific project like `MCycle`, security and privacy aren't really an issue, so if somebody wants to construct the ABC, all they're doing is wasting their own time.
 
 ## What to include in an abstract base class
 An ABC has a lot of potential and what to put in it very much depends on the module you're creating. In general, an ABC is used to declare your core class attributes and methods. However, knowing that the contructor of the ABC will be called any time a child class is created can be very useful for things like 
