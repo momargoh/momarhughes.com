@@ -35,7 +35,7 @@ image:
 projects: ["MCycle"]
 ---
 
-This post follows on from my previous post about abstract base classes in Cython: [link to post]({{< relref "../../abstract-base-class-in-cython/index.md" >}}"). One core method that has been incredibly useful for me is ``copy()``; it's such a fundamental concept that has so many applications. So let's dive into how to integrate copying into your abstract base class.
+This post follows on from my previous post about abstract base classes in Cython: [link to post]({{< relref "../abstract-base-class-in-cython/index.md" >}}). One core method that has been incredibly useful for me is ``copy()``; it's such a fundamental concept that has so many applications. So let's dive into how to integrate copying into your abstract base class.
 
 ## TL;DR
 I use a little trick of creating a list/tuple of the constructor parameters. Iterate through this collecting values to create a fresh copy of an object. Check out the MCycle source code to see this in action: [link to code]("https://github.com/momargoh/MCycle/blob/master/mcycle/bases/abc.pyx")
