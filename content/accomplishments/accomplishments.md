@@ -17,6 +17,43 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
+# MCycle
+[[item]]
+  organization = "Github"
+  organization_url = ""
+  title = "MCycle v1.1 released - feat. REFPROP and more"
+  url = "https://github.com/momargoh/MCycle"
+  certificate_url = ""
+  date_start = "2020-04-07"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Journal of Open Source Software"
+  organization_url = "https://joss.theoj.org/"
+  title = "Published MCycle: A Python package for 1D sizing and analysis of thermodynamic power cycles"
+  url = "https://doi.org/10.21105/joss.00710"
+  certificate_url = ""
+  date_start = "2018-08-02"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Github"
+  organization_url = ""
+  title = "MCycle v1.0 released- switched to Cython source code"
+  url = "https://github.com/momargoh/MCycle"
+  certificate_url = ""
+  date_start = "2018-07-31"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Github"
+  organization_url = ""
+  title = "MCycle v0.1 released"
+  url = "https://github.com/momargoh/MCycle"
+  certificate_url = ""
+  date_start = "2018-05-07"
+  date_end = ""
+  description = ""
 [[item]]
   organization = "Github"
   organization_url = ""
@@ -27,4 +64,53 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
+# Distance Tuition
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition Hub launched"
+  url = "https://www.distancetuition.com/tuition-hub"
+  certificate_url = ""
+  date_start = "2019-07-24"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition registered in Australia"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2019-02-11"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "distancetuition.com domain bought"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2018-11-12"
+  date_end = ""
+  description = ""
+
+# Publications/conferences etc
+[[item]]
+  organization = "Turbulence Heat and Mass Transfer"
+  organization_url = "http://www.thmt-18.org/"
+  title = "Presented at THMT2018 in Rio de Janeiro"
+  url = ""
+  certificate_url = ""
+  date_start = "2018-07-10"
+  date_end = "2018-07-13"
+  description = ""
+[[item]]
+  organization = "APISAT"
+  organization_url = "http://apisat2017.org/"
+  title = "Presented at APISAT2017 in Seoul"
+  url = ""
+  certificate_url = ""
+  date_start = "2017-10-16"
+  date_end = "2017-10-18"
+  description = ""
+# Start-ups
 +++
