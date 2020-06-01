@@ -17,6 +17,17 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
+# Ph.D.
+[[item]]
+  organization = "UNSW"
+  organization_url = "https://www.unsw.edu.au"
+  title = "Started Ph.D. in Aeronautical Engineering"
+  url = ""
+  certificate_url = ""
+  date_start = "2017-02-20"
+  date_end = ""
+  description = ""
+
 # MCycle
 [[item]]
   organization = "Github"
@@ -113,4 +124,31 @@ date_format = "Jan 2006"
   date_end = "2017-10-18"
   description = ""
 # Start-ups
+[[item]]
+  organization = "UNSW Maker Games 2018"
+  organization_url = "https://www.challeng.unsw.edu.au/challeng-pillars/maker-games"
+  title = "2nd Place Award at Maker Games Showcase"
+  url = ""
+  certificate_url = ""
+  date_start = "2018-10-22"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "UNSW Maker Games 2018"
+  organization_url = "https://www.challeng.unsw.edu.au/challeng-pillars/maker-games"
+  title = "Defence Innovations Project Team Mentor"
+  url = ""
+  certificate_url = ""
+  date_start = "2018-07-26"
+  date_end = "2018-10-22"
+  description = ""
+[[item]]
+  organization = "SkyBorne Tech"
+  organization_url = "https://skybornetech.com/"
+  title = "Advanced Flight Controls & Simulations Lead"
+  url = ""
+  certificate_url = ""
+  date_start = "2014-12"
+  date_end = "2015-03"
+  description = ""
 +++
