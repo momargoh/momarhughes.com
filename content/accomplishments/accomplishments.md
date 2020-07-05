@@ -17,14 +17,53 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
-# Ph.D.
+
+# Codecademy
 [[item]]
-  organization = "UNSW"
-  organization_url = "https://www.unsw.edu.au"
-  title = "Started Ph.D. in Aeronautical Engineering"
-  url = ""
+  organization = "Codecademy"
+  organization_url = "https://www.codecademy.com"
+  title = "Course Completed: Learn ReactJS: Part II"
+  url = "https://www.codecademy.com/users/momargoh/achievements"
   certificate_url = ""
-  date_start = "2017-02-20"
+  date_start = "2018-11-08"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Codecademy"
+  organization_url = "https://www.codecademy.com"
+  title = "Course Completed: Learn C++"
+  url = "https://www.codecademy.com/users/momargoh/achievements"
+  certificate_url = ""
+  date_start = "2018-12-11"
+  date_end = ""
+  description = ""
+
+  # Distance Tuition
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition Hub launched"
+  url = "https://www.distancetuition.com/tuition-hub"
+  certificate_url = ""
+  date_start = "2019-07-24"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition registered in Australia"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2019-02-11"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "distancetuition.com domain bought"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2018-11-12"
   date_end = ""
   description = ""
 
@@ -74,36 +113,16 @@ date_format = "Jan 2006"
   date_start = "2018-03-07"
   date_end = ""
   description = ""
-
-# Distance Tuition
+# Ph.D.
 [[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "Distance Tuition Hub launched"
-  url = "https://www.distancetuition.com/tuition-hub"
+  organization = "UNSW"
+  organization_url = "https://www.unsw.edu.au"
+  title = "Started Ph.D. in Aeronautical Engineering"
+  url = ""
   certificate_url = ""
-  date_start = "2019-07-24"
+  date_start = "2017-02-20"
   date_end = ""
   description = ""
-[[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "Distance Tuition registered in Australia"
-  url = "https://distancetuition.com"
-  certificate_url = ""
-  date_start = "2019-02-11"
-  date_end = ""
-  description = ""
-[[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "distancetuition.com domain bought"
-  url = "https://distancetuition.com"
-  certificate_url = ""
-  date_start = "2018-11-12"
-  date_end = ""
-  description = ""
-
 # Publications/conferences etc
 [[item]]
   organization = "Turbulence Heat and Mass Transfer"
