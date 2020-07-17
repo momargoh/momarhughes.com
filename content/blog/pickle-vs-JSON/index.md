@@ -56,12 +56,13 @@ import pickle
 obj1 = {'name': 'Nora', 'age': 0}
 obj2 = ('t', 'u', 'p', 'l', 'e')
 fileName = 'dumped.txt'
+with open(fileName, 'wb+') as f:
+    pickle.dump(obj1, f) #serialize obj1
+    pickle.dump(obj2, f) #serialize obj2
 
-pickle.dump(obj1, fileName) #serialize obj1
-pickle.dump(obj2, fileName) #serialize obj2
-
-obj1Reloaded = pickle.load(fileName) #deserialize obj1
-obj2Reloaded = pickle.load(fileName) #deserialize obj2
+with open(fileName, 'rb') as f:
+    obj1Reloaded = pickle.load(f) #deserialize obj1
+    obj2Reloaded = pickle.load(f) #deserialize obj2
 ```
 
 So you may have picked up on a very annoying feature of pickle already in that ``dump`` and ``load`` only serialize/deserialize one object at a time. Yes, you could create a list of your objects and just serialize that, but either way, you need to keep track of the order in which you serialize the object. If you only have two objects with different types it's quite obvious which is which, but if you have many similar objects you'll need to keep track of which is which.
@@ -75,11 +76,13 @@ obj1 = {'name': 'Nora', 'age': 0}
 obj2 = ('t', 'u', 'p', 'l', 'e')
 fileName = 'dumped.json'
 
-json.dump(dict(obj1=obj1, obj2obj2), fileName) #serialize obj1 and obj2
+with open(fileName, 'w+') as f:
+    json.dump(dict(obj1=obj1, obj2obj2), f) #serialize obj1 and obj2
 # produces a file containing:
 # {"obj2": [1, 2, 3], "obj1": {"name": "Nora", "age": 0}}
 
-objsReloaded = json.load(fileName) #deserialize
+with open(fileName, 'r') as f:
+    objsReloaded = json.load(f) #deserialize
 
 obj1Reloaded = objsReloaded["obj1"] #get obj1
 obj2Reloaded = objsReloaded["obj2"] #get obj2
@@ -111,17 +114,19 @@ class Tea():
 ma = Tea(name='matcha', brewTemp=80)
 eb = Tea(name='english breakfast', brewTemp=100)
 
-pickle.dump(ma, 'teas.txt') #serialize
-pickle.dump(eb, 'teas.txt')
+with open('teas.txt', 'wb+') as f:
+    pickle.dump(ma, f) #serialize
+    pickle.dump(eb, f)
 
-maReloaded = pickle.load('teas.txt') #deserialize
-ebReloaded = pickle.load('teas.txt')
+with open('teas.txt', 'rb') as f:
+    maReloaded = pickle.load('teas.txt') #deserialize
+    ebReloaded = pickle.load('teas.txt')
 ```
 
 The same can be done in JSON but it requires more steps. We would have to save the individual objects attributes and then use them to reconstruct the objects when we deserialize. The equivalent example in JSON would be something like this:
 
 ```python
-import pickle
+import json
 class Tea():
     def __init__(self, **kwargs):
         self.name=kwargs["name"]
@@ -130,9 +135,11 @@ class Tea():
 ma = Tea(name='matcha', brewTemp=80)
 eb = Tea(name='english breakfast', brewTemp=100)
 
-json.dump({"ma":{"name": ma.name, "brewTemp": ma.brewTemp}, "eb":{"name": eb.name, "brewTemp": eb.brewTemp}}, 'teas.txt') #serialize
+with open('teas.txt', 'w+') as f:
+    json.dump({"ma":{"name": ma.name, "brewTemp": ma.brewTemp}, "eb":{"name": eb.name, "brewTemp": eb.brewTemp}}, f) #serialize
 
-teas = json.load('teas.txt') #deserialize
+with open('teas.txt', 'r') as f:
+    teas = json.load(f) #deserialize
 for key, value in teas.items():
     locals()[key+'Reloaded'] = Tea(**value)
 ```
