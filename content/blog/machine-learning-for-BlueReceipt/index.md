@@ -15,7 +15,7 @@ categories:
 - opinion
 - start-up
 date: "2020-07-18T15:30:00Z"
-lastmod: ""
+lastmod: "2020-07-18T15:30:00Z"
 featured: false
 draft: false
 
@@ -53,7 +53,9 @@ For me, beyond the obvious of rolling out to other shop frameworks and growing t
 So what could ML be applied to exactly? (This is where having a partner with an advertising degree comes in handy)
 
 1. **Time of day to send messages**. Now this is a classic in marketing right: your client base is more likely to be active online, or responding to their phone at certain times of the day. So sending a message at the right time makes a big difference. But you could go beyond just getting a feel for that yourself by applying ML to optimise based on the responses you get. This may be something that varies throughout a year (particularly one as tumultuous as 2020!) in different ways depending on your customers. For example a business who is selling largely to new parents will find the level of response varies differently throughout the year compared to a business that targets young adults.
+
 2. **Response to keywords**. Do you know which words trigger your particular customers to respond? Choice of words is hugely important in all forms of communication: nobody can sense your subcious intent over the internet, they can only read the text you send. ML could provide a lot of insight into which words to use in your messages, which to avoid, which not to overuse etc. This is definitely something that would be much harder for a human to judge through intuition, but a computer can easily analyse responses.
+
 3. **Types of marketing to focus on**. Your business is very, very unlikely to be the only business of its type on the internet. ML can gather data from other business like yours to make suggestions as to what type of marketing you should be targeting, ie; should you be going heavier on pop-ups or is it best to have a daily, or weekly broadcast. Again, this is the benefit of using ML on a large dataset; you can see what is working best for your competitors and use that to make your own marketing decisions.
 
 I think the list could go on, but hopefully you get the point: ML that has been fed data from all the businesses using BlueReceipt can be used to provide tailored advice to individual businesses. I think this could be the next step, a few years down the track, that really sets BlueReceipt apart as more than just a very pretty all-in-one marketing platform.
