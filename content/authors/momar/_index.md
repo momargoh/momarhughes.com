@@ -10,14 +10,14 @@ authors:
 superuser: true
 
 # Role/position
-role: Engineer / Freelance Programmer
+role: Programmer / Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: University of New South Wales
-  url: "https://www.unsw.edu.au"
 - name: Distance Tuition
   url: "https://www.distancetuition.com"
+- name: University of New South Wales
+  url: "https://www.unsw.edu.au"
 
 # Short bio (displayed in user profile at end of posts)
 bio: I'm addicted to Python.
@@ -50,9 +50,9 @@ social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-#- icon: twitter
-#  icon_pack: fab
-#  link: https://twitter.com/GeorgeCushen
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/MomarHughes
 #- icon: google-scholar
 #  icon_pack: ai
 #  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
@@ -75,6 +75,6 @@ email: ""
 #- Visitors
 ---
 
-I'm an Aeronautical Engineering Ph.D. Candidate. My thesis topic is the investigation of waste heat recovery of aircraft engines, using an organic Rankine cycle, to reduce fuel burn. I have been programming, mainly in Python, for over a decade, in start-ups, open source projects and as a freelancer. I also run an online university tutoring business: Distance Tuition.
+I have been programming, for close to a decade, in start-ups, open source projects and as a freelancer. Python has always been my bread and butter but more recently I've been honing my skills in Javascript. I'm an Aeronautical Engineering Ph.D. Candidate and work as a casual academic at my university. I also co-founded an online university tutoring business: Distance Tuition.
 
 
