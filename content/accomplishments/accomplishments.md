@@ -17,6 +17,56 @@ date_format = "Jan 2006"
 #   Leave other parameters empty if not required.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
+
+# Codecademy
+[[item]]
+  organization = "Codecademy"
+  organization_url = "https://www.codecademy.com"
+  title = "Course Completed: Learn ReactJS: Part II"
+  url = "https://www.codecademy.com/users/momargoh/achievements"
+  certificate_url = ""
+  date_start = "2018-11-08"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Codecademy"
+  organization_url = "https://www.codecademy.com"
+  title = "Course Completed: Learn C++"
+  url = "https://www.codecademy.com/users/momargoh/achievements"
+  certificate_url = ""
+  date_start = "2018-12-11"
+  date_end = ""
+  description = ""
+
+  # Distance Tuition
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition Hub launched"
+  url = "https://www.distancetuition.com/tuition-hub"
+  certificate_url = ""
+  date_start = "2019-07-24"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "Distance Tuition registered in Australia"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2019-02-11"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "Distance Tuition"
+  organization_url = "https://distancetuition.com"
+  title = "distancetuition.com domain bought"
+  url = "https://distancetuition.com"
+  certificate_url = ""
+  date_start = "2018-11-12"
+  date_end = ""
+  description = ""
+
 # MCycle
 [[item]]
   organization = "Github"
@@ -63,36 +113,16 @@ date_format = "Jan 2006"
   date_start = "2018-03-07"
   date_end = ""
   description = ""
-
-# Distance Tuition
+# Ph.D.
 [[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "Distance Tuition Hub launched"
-  url = "https://www.distancetuition.com/tuition-hub"
+  organization = "UNSW"
+  organization_url = "https://www.unsw.edu.au"
+  title = "Started Ph.D. in Aeronautical Engineering"
+  url = ""
   certificate_url = ""
-  date_start = "2019-07-24"
+  date_start = "2017-02-20"
   date_end = ""
   description = ""
-[[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "Distance Tuition registered in Australia"
-  url = "https://distancetuition.com"
-  certificate_url = ""
-  date_start = "2019-02-11"
-  date_end = ""
-  description = ""
-[[item]]
-  organization = "Distance Tuition"
-  organization_url = "https://distancetuition.com"
-  title = "distancetuition.com domain bought"
-  url = "https://distancetuition.com"
-  certificate_url = ""
-  date_start = "2018-11-12"
-  date_end = ""
-  description = ""
-
 # Publications/conferences etc
 [[item]]
   organization = "Turbulence Heat and Mass Transfer"
@@ -113,4 +143,30 @@ date_format = "Jan 2006"
   date_end = "2017-10-18"
   description = ""
 # Start-ups
+[[item]]
+  organization = "UNSW Maker Games 2018"
+  organization_url = "https://www.challeng.unsw.edu.au/challeng-pillars/maker-games"
+  title = "2nd Place Award at Maker Games Showcase"
+  url = ""
+  certificate_url = ""
+  date_start = "2018-10-22"
+  date_end = ""
+  description = ""
+[[item]]
+  organization = "UNSW Maker Games 2018"
+  organization_url = "https://www.challeng.unsw.edu.au/challeng-pillars/maker-games"
+  title = "Defence Innovations Project Team Mentor"
+  url = ""
+  certificate_url = ""
+  date_start = "2018-07-26"
+  date_end = "2018-10-22"
+  description = ""
+[[item]]
+  organization = "SkyBorne Tech"
+  organization_url = "https://skybornetech.com/"
+  title = "Advanced Flight Controls & Simulations Lead"
+  url = ""
+  certificate_url = ""
+  date_start = "2014-12-01"
+  description = ""
 +++
