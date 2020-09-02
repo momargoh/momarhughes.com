@@ -35,7 +35,7 @@ image:
 projects: ["Breguet", "MCycle"]
 ---
 
-This post follows on from my previous posts about abstract base classes in Cython: [link to post about ABCs]({{< ref "/blog/abstract-base-class-in-cython/index.md" >}})[link to post about copy method]({{< ref "/blog/copy-method-for-cython-abstract-base-class/index.md" >}}). Another core method that I believe is incredibly useful but is often overlooked is  ``update()``. An update method is so much more powerful than directly editing attributes, as I'm sure you'll agree by this end of this post. 
+This post follows on from my previous posts about abstract base classes in Cython: [link to post about ABCs]({{< ref "/blog/2020-03-26_abstract-base-class-in-cython/index.md" >}})[link to post about copy method]({{< ref "/blog/2020-04-11_copy-method-for-cython-abstract-base-class/index.md" >}}). Another core method that I believe is incredibly useful but is often overlooked is  ``update()``. An update method is so much more powerful than directly editing attributes, as I'm sure you'll agree by this end of this post. 
 
 ## TL;DR
 An update method can be used to handle errors, protect against updating, modify nested attributes and integrate logging. It's neat!
