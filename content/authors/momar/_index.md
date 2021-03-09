@@ -14,13 +14,13 @@ role: Programmer / Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Distance Tuition
-  url: "https://www.distancetuition.com"
+- name: Clean Energy Reviews
+  url: "https://solar.cleanenergyreviews.info/customer"
 - name: University of New South Wales
   url: "https://www.unsw.edu.au"
 
 # Short bio (displayed in user profile at end of posts)
-bio: I'm addicted to Python.
+bio: Creative problem solver.
 
 interests:
 - Python / Cython
@@ -78,6 +78,6 @@ email: ""
 #- Visitors
 ---
 
-I have been programming, for close to a decade, in start-ups, open source projects and as a freelancer. Python has always been my bread and butter but more recently I've been honing my skills in Javascript. I'm an Aeronautical Engineering Ph.D. Candidate and work as a casual academic at my university. I also co-founded an online university tutoring business: Distance Tuition.
+I have been programming, for close to a decade, in start-ups, open source projects and as a freelancer. Python has always been my bread and butter but more recently I've been honing my skills in Javascript. I'm an Aeronautical Engineering Ph.D. Candidate and work as a casual academic at my university.
 
 
